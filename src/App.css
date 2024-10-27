@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.app.light {
+  color: #000;
+}
+
+.app.dark {
+  color: #fff;
+  background-color: #333;
+}
+
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 300px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light background */
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.app.dark .login-container {
+  background-color: #444; /* Dark background for login */
+  border: 1px solid #666; /* Dark border */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  width: 100%; /* Make buttons full width */
+  padding: 10px;
+  background-color: #5a67d8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Add space below each button */
+}
+
+/* Optional: If you want to remove margin from the last button */
+button:last-child {
+  margin-bottom: 0; /* No margin on the last button */
+}
+
+
+button:hover {
+  background-color: #4c51bf;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+/* General App Styles */
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-around; /* Space the buttons evenly */
+  margin-bottom: 20px;
+  background-color: #5a67d8; /* Background color for the navbar */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.nav-button {
+  color: white; /* Text color for buttons */
+  text-decoration: none; /* Remove underline from links */
+  padding: 10px 20px; /* Padding around the buttons */
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-button:hover {
+  background-color: #4c51bf; /* Darker shade on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) { /* Tablet and smaller screens */
+  .login-container {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 1.5rem; /* Less padding on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+  }
+
+  .nav-button {
+    margin-bottom: 10px; /* Space between buttons */
+    width: 100%; /* Full width buttons */
+  }
+
+  button {
+    padding: 8px; /* Adjust button size for smaller screens */
+  }
+
+  .error {
+    font-size: 0.8em; /* Smaller error text */
+  }
+}
+
+@media (max-width: 480px) { /* Mobile screens */
+  .login-container {
+    padding: 1rem; /* Further reduce padding */
+  }
+
+  .nav-button {
+    padding: 8px 10px; /* Smaller button padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  button {
+    padding: 6px; /* Smaller buttons */
+  }
+
+  .error {
+    font-size: 0.7em; /* Even smaller error text */
   }
 }

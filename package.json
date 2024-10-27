@@ -6,9 +6,16 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "docx": "^9.0.2",
+    "file-saver": "^2.0.5",
+    "jsbarcode": "^3.11.6",
+    "jspdf": "^2.5.2",
+    "qrcode.react": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
+    "tesseract.js": "^5.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
